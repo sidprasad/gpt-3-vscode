@@ -55,7 +55,3 @@ Queries GPT-3 with highlighted text. The response is automatically injected **be
 > - Enter your correct UserId into the prompt 
 > - Reload the window
 ---
-
-
-## TODO:
-
