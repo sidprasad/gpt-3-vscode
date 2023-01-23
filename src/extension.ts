@@ -31,12 +31,10 @@ const initOpenAI = (credentials: Config): OpenAIApi => {
 
 // This method is called when the extension is activated
 export async function activate(context: vscode.ExtensionContext) {
-	console.log('Activated');
 
 	const credentials = await initAuth(context);
 	if (!credentials) {
 		deactivate();
-
 		return;
 	}
 
@@ -53,7 +51,7 @@ export async function activate(context: vscode.ExtensionContext) {
 		"detail": "- GPT-3"
 	};
 
-	// Create documentation for highlighted code
+	// Ask GPT about selected code.
 	let askSelected = vscode.commands.registerCommand('GPT.askSelected', async () => {
 
 		const editor = vscode.window.activeTextEditor;
@@ -96,7 +94,7 @@ export async function activate(context: vscode.ExtensionContext) {
 
 		// Insert the text at the end of the selection
 		editor.edit((editBuilder) => {
-			editBuilder.insert(editor.selection.end, `\nGPT Responded: ${output}\n`);
+			editBuilder.insert(editor.selection.end, `\nGPT Responded:\n${output}\n`);
 		});
 
 
@@ -106,7 +104,6 @@ export async function activate(context: vscode.ExtensionContext) {
 
 	
 
-	
 
 	// Directly write a prompt for GPT
 
@@ -216,7 +213,8 @@ export async function activate(context: vscode.ExtensionContext) {
 		askSelected,
 		askGPT,
 		updateAPIKey,
-		removeAPIKey
+		removeAPIKey,
+		updateUserId
 	);
 };
 

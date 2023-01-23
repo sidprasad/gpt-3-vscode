@@ -1,8 +1,8 @@
 {
-  "name": "gpt3-vscode-extension-cs-171",
-  "displayName": "Logic for Systems: GPT-3 A.I. Coding Assistant",
-  "description": "Use GPT in VSCode",
-
+  "name": "gpt3-vscode-extension-brown",
+  "displayName": "GPT-3 Assistant",
+  "description": "GPT-3 Assistant for Brown University CS courses",
+  "icon": "images/logo.png",
   "version": "0.13.1",
   "engines": {
     "vscode": "^1.74.0"
@@ -47,6 +47,11 @@
       {
         "command": "GPT.removeAPIKey",
         "title": "Remove OpenAI API Key from secret storage",
+        "icon": "$(error)"
+      },
+      {
+        "command": "GPT.updateUserId",
+        "title": "Update my User Id",
         "icon": "$(error)"
       }
     ],
