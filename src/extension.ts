@@ -96,7 +96,7 @@ export async function activate(context: vscode.ExtensionContext) {
 
 		// Insert the text at the end of the selection
 		editor.edit((editBuilder) => {
-			editBuilder.insert(editor.selection.end, `\n/* GPT Response: \n ${output} */\n`);
+			editBuilder.insert(editor.selection.end, `\nGPT Responded: ${output}\n`);
 		});
 
 
