@@ -48,9 +48,14 @@ Queries GPT-3 with highlighted text. The response is automatically injected **be
 > - Open command palette and run `Update OpenAI API Key`
 > - Enter your correct API Key into the prompt 
 > - Reload the window
+
+## Reset UserId
+
+> - Open command palette and run `Update UserId`
+> - Enter your correct UserId into the prompt 
+> - Reload the window
 ---
 
 
 ## TODO:
 
-Similar functionality for UserId.

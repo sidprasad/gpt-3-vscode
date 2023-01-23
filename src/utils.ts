@@ -91,9 +91,6 @@ const setNewUserId = async (context: vscode.ExtensionContext): Promise<string> =
 
 
 
-
-
-
 const buildStatusBarItem = (): vscode.StatusBarItem => {
 	const statusBarItem = vscode.window.createStatusBarItem();
 	statusBarItem.name = "GPT";
@@ -102,13 +99,6 @@ const buildStatusBarItem = (): vscode.StatusBarItem => {
 	statusBarItem.tooltip = "Opens a text input for you to send your message to GPT";
 
 	return statusBarItem;
-};
-
-const getFileExtension = (file: string): string => {
-	let activeFile = file;
-	let filePathParts = activeFile.split('.');
-
-	return filePathParts[filePathParts.length - 1];
 };
 
 const createPayload = (type: string, prompt: string): Payload => {
@@ -165,8 +155,8 @@ export {
 	validatePayload,
 	getConfValue,
 	setNewAPIKey,
-	getFileExtension,
 	buildStatusBarItem,
 	Config,
-	OPENAI_API_KEY
+	OPENAI_API_KEY,
+	setNewUserId
 };

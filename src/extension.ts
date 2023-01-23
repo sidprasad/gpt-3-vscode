@@ -5,7 +5,7 @@ import {
 	createPayload,
 	validatePayload,
 	setNewAPIKey,
-	getFileExtension,
+	setNewUserId,
 	buildStatusBarItem,
 	Config,
 	OPENAI_API_KEY
@@ -195,6 +195,21 @@ export async function activate(context: vscode.ExtensionContext) {
 		statusMessage.dispose();
 		statusBarItem.show();
 	});
+
+
+	// Update OpenAI API Key
+	let updateUserId = vscode.commands.registerCommand('GPT.updateUserId', async () => {
+
+		statusBarItem.hide();
+		const statusMessage = vscode.window.setStatusBarMessage('$(heart) Securely storing your API Key $(pencil)');
+
+		await setNewUserId(context);
+
+		statusMessage.dispose();
+		statusBarItem.show();
+	});
+	
+
 
 
 	context.subscriptions.push(
