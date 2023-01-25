@@ -45,13 +45,13 @@ Queries GPT-3 with highlighted text. The response is automatically injected **be
 
 ## Reset API Key
 
-> - Open command palette and run `Update OpenAI API Key`
+> - Open command palette and run `Update OpenAI API Key` (alt + m on Windows, cmd + m on Mac)
 > - Enter your correct API Key into the prompt 
 > - Reload the window
 
 ## Reset UserId
 
-> - Open command palette and run `Update UserId`
+> - Open command palette and run `Update UserId` (alt + u on Windows, cmd + u on Mac)
 > - Enter your correct UserId into the prompt 
 > - Reload the window
 ---

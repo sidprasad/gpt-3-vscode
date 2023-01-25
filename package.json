@@ -70,7 +70,7 @@
         },
         "GPT.maxTokens": {
           "type": "number",
-          "default": 250,
+          "default": 500,
           "minimum": 1,
           "markdownDescription": "The maximum number of [tokens](https://beta.openai.com/docs/introduction/overview) for each text request to GPT"
         },
@@ -113,7 +113,20 @@
         "key": "alt+g",
         "mac": "cmd+g",
         "when": "editorTextFocus"
+      },
+      {
+        "command": "GPT.updateUserId",
+        "key": "alt+u",
+        "mac": "cmd+u",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "GPT.updateAPIKey",
+        "key": "alt+m",
+        "mac": "cmd+m",
+        "when": "editorTextFocus"
       }
+
     ]
   },
   "scripts": {
