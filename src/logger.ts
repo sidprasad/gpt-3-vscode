@@ -10,10 +10,11 @@ export class Logger {
     {
         this.user = userid;
         const firebaseConfig = {
-            authDomain: "pyret-examples.firebaseapp.com",
-            databaseURL: "https://pyret-examples.firebaseio.com",
-            projectId: "pyret-examples",
-            storageBucket: "pyret-examples.appspot.com",
+            // Add your firebase config here
+            authDomain: "fill.firebaseapp.com",
+            databaseURL: "fill.firebaseio.com",
+            projectId: "fill",
+            storageBucket: "fill",
           };
     
         this.app = initializeApp(firebaseConfig);

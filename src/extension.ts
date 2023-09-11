@@ -38,9 +38,7 @@ export async function activate(context: vscode.ExtensionContext) {
 	}
 
 	logger = new Logger(credentials.userid);
-
 	const openai = initOpenAI(credentials);
-
 	const statusBarItem = buildStatusBarItem();
 
 	statusBarItem.show();
@@ -114,7 +112,6 @@ export async function activate(context: vscode.ExtensionContext) {
 		};
 
 		const prompt = await vscode.window.showInputBox(inputBoxOptions);
-
 		if (!prompt) {
 			vscode.window.showWarningMessage('No input received.');
 			return;
@@ -147,7 +144,6 @@ export async function activate(context: vscode.ExtensionContext) {
 		];
 
 		const gptResponse = vscode.window.showInformationMessage(output, modalMesesageOptions, ...items);
-
 		// Log the payload AND GPT Response here.
 		await logger.info(payload, output);
 
@@ -199,9 +195,6 @@ export async function activate(context: vscode.ExtensionContext) {
 		statusMessage.dispose();
 		statusBarItem.show();
 	});
-	
-
-
 
 	context.subscriptions.push(
 		askSelected,
