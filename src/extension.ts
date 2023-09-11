@@ -18,7 +18,6 @@ import { config } from 'process';
 
 const COPY_OUTPUT = "Copy Output";
 
-
 var logger : Logger;
 
 const initOpenAI = (credentials: Config): OpenAIApi => {
@@ -97,7 +96,6 @@ export async function activate(context: vscode.ExtensionContext) {
 			editBuilder.insert(editor.selection.end, `\nGPT Responded:\n${output}\n`);
 		});
 
-
 		statusMessage.dispose();
 		statusBarItem.show();
 	});
@@ -149,10 +147,6 @@ export async function activate(context: vscode.ExtensionContext) {
 		];
 
 		const gptResponse = vscode.window.showInformationMessage(output, modalMesesageOptions, ...items);
-
-
-
-
 
 		// Log the payload AND GPT Response here.
 		await logger.info(payload, output);
