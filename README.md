@@ -1,6 +1,8 @@
 # GPT-3 Visual Studio Code Extension
 
 
+## Forked from, inspired heavily by https://github.com/Arrendy/gpt3-vscode-extension
+
 Allows you to write to GPT-3 from your editor. Built for use at courses at Brown University.
 
 
